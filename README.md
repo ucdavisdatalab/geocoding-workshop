@@ -33,8 +33,8 @@ There are many, many options for geocoder tools.  I'll list the ones I'm familia
 
 | Software | Region | Cost | Tutorial | Notes |
 |---|---|---|---|---|
-|PostGIS Tiger Geocoder | US | Free | [Building a PostGIS Geocoder](https://experimentalcraft.wordpress.com/2017/11/01/how-to-make-a-postgis-tiger-geocoder-in-less-than-5-days/) | Uses US Census data |
-|PostGIS with Open Addresses |
+|PostGIS Tiger Geocoder | US | Free & Open Source | [Building a PostGIS Geocoder](https://experimentalcraft.wordpress.com/2017/11/01/how-to-make-a-postgis-tiger-geocoder-in-less-than-5-days/) | Uses US Census data |
+|PostGIS with Open Addresses | Dependent on OpenAdresses data coverage | Free & Open Source | [Loading OpenAddresses Data into PostGIS](https://experimentalcraft.wordpress.com/2018/10/19/loading-open-addresses-data-into-postgis/) | |
 |[Pelias Geocoder](https://github.com/pelias/pelias) Installed Locally |
 
 ### Third Party Geocoders
@@ -43,9 +43,10 @@ There are many, many options for geocoder tools.  I'll list the ones I'm familia
 |---|---|---|---|---|
 | [Geocodio](https://www.geocod.io) | US | 2,500 free lookups per day; $0.50 per 1,000 after that | |  |
 | [Geocodio+HIPAA](https://www.geocod.io/healthcare/) | US | Monthly or Yearly Subscription | | HIPAA-compliant |
-| OpenStreetMap Nominatum API | | | | |
-| QGIS Plugins | | | | |
-| [R package tmaptools's geocode_OSM()](https://cran.r-project.org/web/packages/tmaptools/index.html) | Worldwide | Free & Open Source | | Sends data to the OpenStreetMap Nominatum API |
+| OpenStreetMap Nominatim API | | | | Use the API with your favorite programming tools |
+| Nominatim Locator Filter Plugin for QGIS | | | | Uses the OpenStreetMap Nominatim API to process data |
+| Pelias Geocoding Plugin for QGIS | | | | Uses the Pelias geocoder for processing data |
+| [R package tmaptools's geocode_OSM()](https://cran.r-project.org/web/packages/tmaptools/index.html) | Worldwide | Free & Open Source | | Sends data to the OpenStreetMap Nominatim API |
 |[Pelias Geocoder](https://github.com/pelias/pelias)|
 | ArcGIS Geocoder | | Software + Extensions + Credits | | Using any ESRI web service costs credits. Geocoding is particularly credit-intensive so UC Davis affiliates should consult with esrisupport@ucdavis.edu before using this service |
 
