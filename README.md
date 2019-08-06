@@ -34,7 +34,7 @@ There are many, many options for geocoder tools.  I'll list the ones I'm familia
 | Software | Region | Cost | Tutorial | Notes |
 |---|---|---|---|---|
 |PostGIS Tiger Geocoder | US | Free & Open Source | [Building a PostGIS Geocoder](https://experimentalcraft.wordpress.com/2017/11/01/how-to-make-a-postgis-tiger-geocoder-in-less-than-5-days/) | Uses US Census data |
-|PostGIS with Open Addresses | Dependent on OpenAdresses data coverage | Free & Open Source | [Loading OpenAddresses Data into PostGIS](https://experimentalcraft.wordpress.com/2018/10/19/loading-open-addresses-data-into-postgis/) | |
+|PostGIS with OpenAddresses | Dependent on OpenAdresses data coverage | Free & Open Source | [Loading OpenAddresses Data into PostGIS](https://experimentalcraft.wordpress.com/2018/10/19/loading-open-addresses-data-into-postgis/) | |
 |[Pelias Geocoder](https://github.com/pelias/pelias) Installed Locally |
 
 ### Third Party Geocoders
@@ -52,3 +52,22 @@ There are many, many options for geocoder tools.  I'll list the ones I'm familia
 
 
 # Organizing Your Data
+
+The biggest mistake I see when people try to geocode data is trying to use messy data.  Geocoders are very particular about how an address is formatted and what information you include.  Most geocoders require each address to be separated into columns for each piece of information (check your chosen tool's documentation to find out how it specifically needs you to format your data) - so separate columns for Street Address (number + street name), City, State, Postal Code, Country.  
+
+You should **not include** things like 
+
+1. Apartment number, suite, or half addresses.  The geocoder usually doesn't know what to do with these and it will fail.  Remember that the goal is usually to estimate a location along a block face, not to match an exact address (unless you are using OpenAddresses).  "150 Main Street" is probably in the middle of the 100 block.  "150 Main Street suite A" will fail because the geocoder can't find a street called "Main Street suite A".
+2. Non-standard street abbreviations. St., Blvd., Dr. are all fine.  Shortening "Paseo" to PSO will fail. (True story; I've seen this one before.)
+
+# You Try:
+
+This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets. How would you clean this dataset?
+
+|Restaurant|Street|City|State|Zip|
+|---|---|---|---|---|
+|Ali Baba|220 3rd St|Davis|CA|95616
+|Burgers & Brew|403 3rd St|Davis|CA|95616|
+|Davis Noodle City|129 E St #1D|Davis|CA|95616|
+|Davis' Pinata Mexican Grill|305 1st St|Davis|CA|95616|
+|Three Ladies Cafe|130 G St Suite A|Davis|CA|95616|
