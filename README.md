@@ -22,9 +22,12 @@ There are some important things to consider when choosing a tool:
 1. **Budget** How much will it cost to use the software.  Some tools are free.  Others are free for a certain number of addresses and then charge if you exceed that number. Others have a subscription, yearly, or one-time fee.
 1. **Data Required** Does the software require you to provide a road network or does the software come with its own network? If you need to provide one, is the data available for the part of the world you are working in?
 1. **Geographic Restrictions** Different tools specialize in different regions of the world.  For example, Geocodio's online tool is excellent for the US, but doesn't have the data necessary for geocoding for international addresses.
+1. **Platform** What platform does the tool work on? It could be implemented in R, Python, or SQL. Maybe it runs inside a graphical tool like QGIS. Maybe you have to write a script to work with an API. Consider what skills you have or want to learn and if the tool is a good fit for your situation.
 1. **Local Processing or Third Party**  Geocoding can be run on your local computer.  To do this, you typically need geocoding software and to download road network data with address ranges included.  Third party tools don't require you to download road network data because they send your addresses to a cloud service for processing. Addresses by their nature identify the location of people so we should be careful of sending non-public addresses to a third party.  Online geocoders are all third party products.  **Personally Identifiable Information (PII) or HIPAA Data should never be sent to third party geocoder for processing unless that tool is certified to be HIPAA-compliant.**
 
 ## Some Software Options
+
+There are many, many options for geocoder tools.  I'll list the ones I'm familiar with here, but this is not an exhaustive list.
 
 ### Local Geocoders
 
@@ -32,7 +35,7 @@ There are some important things to consider when choosing a tool:
 |---|---|---|---|---|
 |PostGIS Tiger Geocoder | US | Free | [Building a PostGIS Geocoder](https://experimentalcraft.wordpress.com/2017/11/01/how-to-make-a-postgis-tiger-geocoder-in-less-than-5-days/) | Uses US Census data |
 |PostGIS with Open Addresses |
-|Pelias Geocoder Installed Locally |
+|[Pelias Geocoder](https://github.com/pelias/pelias) Installed Locally |
 
 ### Third Party Geocoders
 
@@ -40,7 +43,10 @@ There are some important things to consider when choosing a tool:
 |---|---|---|---|---|
 | [Geocodio](https://www.geocod.io) | US | 2,500 free lookups per day; $0.50 per 1,000 after that | |  |
 | [Geocodio+HIPAA](https://www.geocod.io/healthcare/) | US | Monthly or Yearly Subscription | | HIPAA-compliant |
+| OpenStreetMap Nominatum API | | | | |
 | QGIS Plugins | | | | |
+| [R package tmaptools's geocode_OSM()](https://cran.r-project.org/web/packages/tmaptools/index.html) | Worldwide | Free & Open Source | | Sends data to the OpenStreetMap Nominatum API |
+|[Pelias Geocoder](https://github.com/pelias/pelias)|
 | ArcGIS Geocoder | | Software + Extensions + Credits | | Using any ESRI web service costs credits. Geocoding is particularly credit-intensive so UC Davis affiliates should consult with esrisupport@ucdavis.edu before using this service |
 
 
