@@ -59,7 +59,7 @@ We will be working with QGIS 3 (this was written and tested on 3.8, but 3.4 or 3
 
 Download & install [QGIS 3](https://qgis.org) - the download page will have install files for Mac, Windows, & Linux.
 
-## Organizing Your Data
+## Organizing Your Address Data
 
 The biggest mistake I see when people try to geocode data is trying to use messy data.  Geocoders are very particular about how an address is formatted and what information you include.  Most geocoders require each address to be separated into columns for each piece of information (check your chosen tool's documentation to find out how it specifically needs you to format your data) - so separate columns for Street Address (number + street name), City, State, Postal Code, Country.  
 
@@ -82,4 +82,17 @@ This list of restaurants and addresses in downtown Davis came directly from thei
 |Davis' Pinata Mexican Grill|305 1st St|Davis|CA|95616|
 |Three Ladies Cafe|130 G St Suite A|Davis|CA|95616|
 
+## Download the Road Network Data
 
+Because we want to use a local geocoder, we need to download a road network dataset to match our addresses to.  If we were using an online cloud service, the service would provide the road network for us.
+
+Not just any road shapefile will work for a geocoder.  Specifically, it needs to have attributes for the address ranges (from 100 to 199, for example).
+
+A good source of current and recent road data for the US is the US Census TIGER files, specifically the Edges files.  We will download the edges file for California's Yolo County.  The Census' FTP site is organized with FIPS codes indicating the state and county with a numeric code.  We can look up the FIPS codes at the [County FIPS Codes page of the USDA's NRCS](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/ca/home/?cid=nrcs143_013697) among other places and see the **Yolo County's FIPS code is 06113** - 06 at the front tells us it's California and 113 refers to Yolo County.
+
+Now we'll navigate through the Census' FTP site to download the Yolo County Edges file (be patient, it can be slow):
+
+1. Go to the [US Census' FTP Site](ftp://ftp2.census.gov/geo/tiger)
+1. Click on the *TIGER2018/* folder - note that you can select the folder for the year you want to work with.
+1. Click on the *EDGES/* folder
+1. Click on the *tl_2018_06113_edges.zip* file and download it to a folder on your computer (that you have permissions for and can find again).  Note that the *06113* part of the file name tells us we're downloading the edges for Yolo county.
