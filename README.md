@@ -101,6 +101,7 @@ Now we'll navigate through the Census' FTP site to download the Yolo County Edge
 ## Set Up Your QGIS Project
 Let's set up our QGIS project so we have everything we need.
 
+### Load the Road Network Data
 First, let's load our road network data:
 
 1. Open the *Data Source Manager* dialog either by clicking the button in the tool bar or picking it from the *Layer menu*.
@@ -108,11 +109,18 @@ First, let's load our road network data:
 1. Click on the "..." button in the *Source* section of the dialog and navigate though your file structure to where you saved your *tl_2018_06113_edges.shp* file. Slect the file and click *Open*.
 1. Finally, in the *Data Source Manager*, click *Add* to add the file to the project.  You may need to move the *Data Source Manager* window out of the way to see it.  If it looks good, click the *Close* button.
 
-Right click on the *tl_2018_06113_edges* layer in the *Layers panel* (also known as the *Table of Contents* in some GIS programs) and select *Open Attribute Table*.  Make note of the kinds of data stored here.  Specifically, notice the columns with "to" and "from" in the names like *LFROMADD* and *lTOADD*.
+Right click on the *tl_2018_06113_edges* layer in the *Layers panel* (also known as the *Table of Contents* in some GIS programs) and select *Open Attribute Table*.  Make note of the kinds of data stored here.  Specifically, notice the columns with "to" and "from" in the names like *LFROMADD* and *lTOADD*.  These are the fields that contain the address ranges for the blocks that the geocoder needs to be able to estimate where and address is along the roads.
 
 
-Import the data
-Get the plugin
+### Get the MMQGIS plugin
+
+We'll be using the MMQGIS Plugin to do our geocoding.  It's free to use, but we need to enable it first.  Here's how:
+
+1. In the *Plugins menu*, and select *Manage & Install Plugins*
+1. In the search box at the top, type "MMQGIS".  When you find it, select it from the list.  Details about the plugin will appear on the right side of the screen.
+1. Click the *Install Plugin* button.
+1. Close the *Manage & Install Plugins* dialog.
+1. You should now see an *MMQGIS menu* at the top of your QGIS window.
 
 ## Geocode with the MMQGIS Plugin
 Open the dialog
