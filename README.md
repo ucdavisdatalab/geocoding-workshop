@@ -96,3 +96,28 @@ Now we'll navigate through the Census' FTP site to download the Yolo County Edge
 1. Click on the *TIGER2018/* folder - note that you can select the folder for the year you want to work with.
 1. Click on the *EDGES/* folder
 1. Click on the *tl_2018_06113_edges.zip* file and download it to a folder on your computer (that you have permissions for and can find again).  Note that the *06113* part of the file name tells us we're downloading the edges for Yolo county.
+1. Navigate in the file browser for your computer to where you saved the file and unzip it.
+
+## Set Up Your QGIS Project
+Let's set up our QGIS project so we have everything we need.
+
+First, let's load our road network data:
+
+1. Open the *Data Source Manager* dialog either by clicking the button in the tool bar or picking it from the *Layer menu*.
+1. On the navigation bar on the left side of the windo, pick *Vector* because our road network is lines.
+1. Click on the "..." button in the *Source* section of the dialog and navigate though your file structure to where you saved your *tl_2018_06113_edges.shp* file. Slect the file and click *Open*.
+1. Finally, in the *Data Source Manager*, click *Add* to add the file to the project.  You may need to move the *Data Source Manager* window out of the way to see it.  If it looks good, click the *Close* button.
+
+Right click on the *tl_2018_06113_edges* layer in the *Layers panel* (also known as the *Table of Contents* in some GIS programs) and select *Open Attribute Table*.  Make note of the kinds of data stored here.  Specifically, notice the columns with "to" and "from" in the names like *LFROMADD* and *lTOADD*.
+
+
+Import the data
+Get the plugin
+
+## Geocode with the MMQGIS Plugin
+Open the dialog
+Fill in the form
+Run it
+Check the results - did the points show up where you wanted?  Check the notfound.csv file
+Fix any addesses that can be improved & rerun
+Discuss shortcomings of this particular approach and potential fixes
