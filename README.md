@@ -130,6 +130,17 @@ We'll be using the MMQGIS Plugin to do our geocoding.  It's free to use, but we 
 1. You should now see an *MMQGIS menu* at the top of your QGIS window.
 
 ## Geocode with the MMQGIS Plugin
+
+.
+
+.
+
+**Edit this section**
+
+.
+
+.
+
 Open the dialog
 Fill in the form
 Run it
