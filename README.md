@@ -136,3 +136,14 @@ Run it
 Check the results - did the points show up where you wanted?  Check the notfound.csv file
 Fix any addesses that can be improved & rerun
 Discuss shortcomings of this particular approach and potential fixes
+
+
+Edit the MMQGIS Plugin to handle zip code checking:
+
+1. QGIS Settings menu
+1. profiles
+1. open folder thing
+1. in the folder - go into python > plugins > mmqgis folder
+1. open mmqgis_library.py in a text editor - remove the comments from lines 1835-1838 - be careful of white space, just delete the hash symbol
+1. save
+1. restart qgis
