@@ -138,12 +138,14 @@ Fix any addesses that can be improved & rerun
 Discuss shortcomings of this particular approach and potential fixes
 
 
-Edit the MMQGIS Plugin to handle zip code checking:
+## Why did some points geocode to the wrong city?
+The default code for version 2019.6.11 of the MMQGIS plugin doesn't check the zip code.  The code makes a list of streets and blocks that match, but keeps the first one on the list because the section where it checks the zip codes is commented out (a special character at the front of the lines of code tells the program to skip those lines).  We can alter the code because this is an open source program.  We can edit the MMQGIS Plugin to handle zip code checking:
 
-1. QGIS Settings menu
-1. profiles
-1. open folder thing
-1. in the folder - go into python > plugins > mmqgis folder
-1. open mmqgis_library.py in a text editor - remove the comments from lines 1835-1838 - be careful of white space, just delete the hash symbol
-1. save
-1. restart qgis
+1. On the *Settings menu* in QGIS, select *User Profiles*, then select *Open Active Profile Folder*.  This should open your file browser and take you to the folder where your profile data is stored.
+1. In the file browser, open the *python* folder, then the *plugins folder*, and finally the *mmqgis folder*.
+1. Open the *mmqgis_library.py* file in a text editor.
+1. Carefully remove the comments code ( # ) from lines 1835-1838 - be careful to make sure you don't alter the amount of space before the text, just delete the hash symbols.
+1. Save the file.
+1. Restart qgis.
+1. Re-try the plugin.
+1. If the plugin no longer works, open the *Plugin Manger* and uninstall, then reinstall the plugin to restore it to the default code.
