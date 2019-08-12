@@ -106,7 +106,12 @@ Now we'll navigate through the Census' FTP site to download the Yolo County Edge
 1. Navigate in the file browser for your computer to where you saved the file and unzip it.
 
 ## Set Up Your QGIS Project
-Let's set up our QGIS project so we have everything we need.
+Let's set up our QGIS project so we have everything we need.  Let's open a new project:
+
+1. Start QGIS
+2. In the upper left corner, click the *Project menu*, then select *New*.  Or click the *New Project* icon just below the *Project mneu* that looks like a blank page with the corner turned down.
+
+You now should have a new project open with no data loaded.
 
 ### Load the Road Network Data
 First, let's load our road network data:
@@ -116,7 +121,7 @@ First, let's load our road network data:
 1. Click on the "..." button in the *Source* section of the dialog and navigate though your file structure to where you saved your *tl_2018_06113_edges.shp* file. Slect the file and click *Open*.
 1. Finally, in the *Data Source Manager*, click *Add* to add the file to the project.  You may need to move the *Data Source Manager* window out of the way to see it.  If it looks good, click the *Close* button.
 
-Right click on the *tl_2018_06113_edges* layer in the *Layers panel* (also known as the *Table of Contents* in some GIS programs) and select *Open Attribute Table*.  Make note of the kinds of data stored here.  Specifically, notice the columns with "to" and "from" in the names like *LFROMADD* and *lTOADD*.  These are the fields that contain the address ranges for the blocks that the geocoder needs to be able to estimate where and address is along the roads.
+Right click on the *tl_2018_06113_edges* layer in the *Layers panel* (also known as the *Table of Contents* in some GIS programs) and select *Open Attribute Table*.  Make note of the kinds of data stored here.  Specifically, notice the columns with "to" and "from" in the names like *LFROMADD* and *lTOADD*.  These are the fields that contain the address ranges for the blocks that the geocoder needs to be able to estimate where and address is along the roads.  Explore this data further and try to get a feel for what kind of data is stored in the attribute table.
 
 
 ### Get the MMQGIS plugin
@@ -131,25 +136,29 @@ We'll be using the MMQGIS Plugin to do our geocoding.  It's free to use, but we 
 
 ## Geocode with the MMQGIS Plugin
 
-.
+Now we're ready to geocode.
 
-.
-
-**Edit this section**
-
-.
-
-.
-
-Open the dialog
-Fill in the form
-Run it
-Check the results - did the points show up where you wanted?  Check the notfound.csv file
-Fix any addesses that can be improved & rerun
-Discuss shortcomings of this particular approach and potential fixes
+1. From the *MMQGIS menu*, select *Geocode*, then *Geocode from Street Layer* to start the *Geocode from Street Layer* tool.  Notice that there are other options here.  The *Geocode CSV with Web Service* tool is a good option for data you don't need to protect.  You could use this workshop data with this tool and not be concerned since this data is all public businesses, but in this we'll use the private option.
+1. For the *Input CSV file (UTF-8)* option, click on the "..." button to navigate to your *restaurant_addresses.csv* file.  Note that the UTF-8 designation here refers to the file encoding.  This indicates which character set the tool is expecting.  UTF-8 doesn't have special characters.
+1. The tool will guess at which columns to assign to each option for the Number, Street Name, and Zip columns and will likely get it right if you named the columns names similar to their content, but you should review these just in case.
+1. For the *Street Layer*, choose the *tl_2018_06113_edges* layer from the drop-down menu.
+1. Fill in the columns to match the data requested.  Because the data we are using is from the census and the tool expects this kind of data, it will generally get it right, but you should review the choices.  You can leave the *From X Attribute*, *From Y Attribute*, *To X Attribute*, & *To Y Attribute* with the default selection.
+1. Finally, choose a name and location for your *Output File Name* and *Not Found Output List*.  Give them names that remind you of what these files contain.
+1. Click *Apply*.
+1. The window will indicate how many of the total number of addresses it was able to geocode. If it missed any, those addresses will be recorded in the *Not Found Output List*.
+1. Close the window when it is done.
 
 
-## Why did some points geocode to the wrong city?
+### Review the Results
+
+Look at the distribution of points.  Does it look right?  Did the points show up where you expected?
+
+Open your *Not Found Output List* file to see if any of the points didn't geocode.  If there are any, what happened?  Can you edit the addresses to work better. For example, if there was an appartment number in the address, you could try removing it.
+
+Fix any addresses that need editing and run the addresses again.  If this was a big dataset, I would suggest only re-running the addresses that didn't geocode to reduce the amount of run time.
+
+
+### Why did some points geocode to the wrong city?
 The default code for version 2019.6.11 of the MMQGIS plugin doesn't check the zip code.  The code makes a list of streets and blocks that match, but keeps the first one on the list because the section where it checks the zip codes is commented out (a special character at the front of the lines of code tells the program to skip those lines).  We can alter the code because this is an open source program.  We can edit the MMQGIS Plugin to handle zip code checking:
 
 1. On the *Settings menu* in QGIS, select *User Profiles*, then select *Open Active Profile Folder*.  This should open your file browser and take you to the folder where your profile data is stored.
