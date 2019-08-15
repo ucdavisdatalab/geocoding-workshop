@@ -1,10 +1,3 @@
-
-# This workshop is in progress.
-# I plan to have this workshop completed by 15 Aug 2019.
-# Please check back then.
-.
-.
-.
 # Geocoding Workshop
 
 # The Big Concepts
