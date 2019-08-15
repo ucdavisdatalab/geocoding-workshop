@@ -157,7 +157,7 @@ Fix any addresses that need editing and run the addresses again.  If this was a 
 
 
 ### Why did some points geocode to the wrong city?
-The default code for version 2019.6.11 of the MMQGIS plugin doesn't check the zip code.  The code makes a list of streets and blocks that match, but keeps the first one on the list because the section where it checks the zip codes is commented out (a special character at the front of the lines of code tells the program to skip those lines).  We can alter the code because this is an open source program.  We can edit the MMQGIS Plugin to handle zip code checking:
+The default code for version 2019.6.11 of the MMQGIS plugin doesn't check the zip code.  The code makes a list of streets and blocks that match, but keeps the first one on the list because the section where it checks the zip codes is commented out (a special character at the front of the lines of code tells the program to skip those lines).  We can alter the code because this is an open source program.  We can edit the MMQGIS Plugin to turn on the zip code checking capability:
 
 1. On the *Settings menu* in QGIS, select *User Profiles*, then select *Open Active Profile Folder*.  This should open your file browser and take you to the folder where your profile data is stored.
 1. In the file browser, open the *python* folder, then the *plugins folder*, and finally the *mmqgis folder*.
