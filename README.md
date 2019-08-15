@@ -13,6 +13,10 @@ Why does this work? Because most cities have an organized system of addresses.  
 
 Buildings are arranged in numerical order along a street and each block typically starts a new number at the front of the building number.  So all the 100 addresses are on one block, the 200s are on the next block, etc.  Further, usually the odd numbers are on one side of the street and the even numbers are on the other.
 
+![alt text](https://www.e-education.psu.edu/natureofgeoinfo/sites/www.e-education.psu.edu.natureofgeoinfo/files/image/address_ranges.gif "Address Ranges Visual")  
+
+[Image Source: Penn State Dept. of Geography](https://www.e-education.psu.edu/natureofgeoinfo/c4_p7.html)
+
 # Software
 There are many tools to help you geocode addresses.  A typical geocoding tool consists of software that compares your addresses to the road network or known address locations.  FOr some software, you may need to provide the road network data or address database, and for other software, you may use data stored online for reference.
 
