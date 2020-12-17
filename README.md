@@ -75,11 +75,6 @@ There are many, many options for geocoder tools.  I'll list the ones I'm familia
 
 # Hands-On Geocoding
 
-We will be working with QGIS 3 (this was written and tested on 3.8, but 3.4 or 3.6 should also work) and using the MMQGIS Plugin to geocode from a street file that we download - so we'll be geocoding locally.
-
-## Get the Software
-
-Download & install [QGIS 3](https://qgis.org) - the download page will have install files for Mac, Windows, & Linux.
 
 ## Organizing Your Address Data
 
