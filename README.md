@@ -16,7 +16,7 @@ Workshop participants will
 
  * [QGIS](https://qgis.org/) version 3.16 – free & open source graphical GIS program for Mac, Windows, & Linux
  * A spreadsheet program of your choice (such as Excel, Libre Office Calc, etc.)
- * A text editor with line numbers - I suggest Notepad++
+ * A text editor with line numbers - I suggest [Notepad++](https://notepad-plus-plus.org/) for Windows
  
 
 # The Big Concepts
