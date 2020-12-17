@@ -1,10 +1,28 @@
 # Geocoding Workshop
+In this workshop, we’ll discuss the concepts needed to geocode data, understand options for working with personally identifiable data and non-identifiable data, and gain some hands-on experience with geocoding address data using QGIS, a GIS with a graphical user interface.
+
+**Learning Objectives:**
+
+Workshop participants will
+
+ * Gain a conceptual understanding of how geocoding works
+ * Learn options for geocoding data with different security needs
+ * Gain experience with geocoding tools
+ 
+
+**Prerequisites:** An introductory-level understanding of GIS and experience with graphical GIS software is recommended.
+
+**Software:**
+
+ * QGIS version 3.16 – free & open source graphical GIS program for Mac, Windows, & Linux
+ * A spreadsheet program of your choice (such as Excel, Libre Office Calc, etc.)
+ 
 
 # The Big Concepts
 
 ## What is Geocoding?
 
-Geocoding is the process of translating postal addresses into geographic coordinates.
+Geocoding is the process of estimating a real-world location (typically we think of latitude & longitude) from a postal address. 
 
 ## How Does This Work?
 We do the process of geocoding in our brains every time we go to a new address.  Let's imaging your friend moved to a new house and you're on your way to their house warming party.  Their address is 150 Main Street.  If you're familiar with the town and you're not using a turn-by-turn direction app, you'd probably go to Main Street and start looking at addresses.  Once you found the 100 block (the addresses are something like 110, 125, etc.), you would probably guess that house number 150 is about in the middle of the block and on the side of the street with the even numbered houses.
