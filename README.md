@@ -14,7 +14,7 @@ Workshop participants will
 
 **Software:**
 
- * QGIS version 3.16 – free & open source graphical GIS program for Mac, Windows, & Linux
+ * [QGIS](https://qgis.org/) version 3.16 – free & open source graphical GIS program for Mac, Windows, & Linux
  * A spreadsheet program of your choice (such as Excel, Libre Office Calc, etc.)
  
 
