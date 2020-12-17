@@ -16,6 +16,7 @@ Workshop participants will
 
  * [QGIS](https://qgis.org/) version 3.16 – free & open source graphical GIS program for Mac, Windows, & Linux
  * A spreadsheet program of your choice (such as Excel, Libre Office Calc, etc.)
+ * A text editor with line numbers - I suggest Notepad++
  
 
 # The Big Concepts
@@ -88,7 +89,7 @@ You should **not include** things like
 
 ### You Try:
 
-This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets.  You can get your own copy in the [data folder](/data).  ***The MMQGIS Geocode from Street Layer tool requires that the street address be separated into two columns - one for the street number and another for the street name.*** How would you clean this dataset & prepare it for use with the MMQGIS plugin?  Using a spreadsheet program (Excel, Calc, etc.), prepare this dataset.
+This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets.  You can get your own copy in the [data folder](/data).  ***The MMQGIS Geocode from Street Layer tool requires that the street address be separated into two columns - one for the street number and another for the street name.*** How would you clean this dataset & prepare it for use with the MMQGIS plugin?  Using a spreadsheet program (Excel, Calc, etc.), prepare this dataset and save it as *restaurant_addresses_cleaned.csv*.
 
 |Restaurant|Street|City|State|Zip|
 |---|---|---|---|---|
@@ -152,7 +153,7 @@ We'll be using the MMQGIS Plugin to do our geocoding.  It's free to use, but we 
 Now we're ready to geocode.
 
 1. From the *MMQGIS menu*, select *Geocode*, then *Geocode from Street Layer* to start the *Geocode from Street Layer* tool.  Notice that there are other options here.  The *Geocode CSV with Web Service* tool is a good option for data you don't need to protect.  You could use this workshop data with this tool and not be concerned since this data is all public businesses, but in this workshop we'll use the private option.
-1. For the *Input CSV file (UTF-8)* option, click on the "..." button to navigate to your *restaurant_addresses.csv* file.  Note that the UTF-8 designation here refers to the file encoding.  This indicates which character set the tool is expecting.  UTF-8 doesn't have special characters.
+1. For the *Input CSV file (UTF-8)* option, click on the "..." button to navigate to your *restaurant_addresses_cleaned.csv* file.  Note that the UTF-8 designation here refers to the file encoding.  This indicates which character set the tool is expecting.  UTF-8 doesn't have special characters.
 1. The tool will guess at which columns to assign to each option for the Number, Street Name, and Zip columns and will likely get it right if you named the columns names similar to their content, but you should review these just in case.
 1. For the *Street Layer*, choose the *tl_2018_06113_edges* layer from the drop-down menu.
 1. Fill in the columns to match the data requested.  Because the data we are using is from the census and the tool expects this kind of data, it will generally get it right, but you should review the choices.  You can leave the *From X Attribute*, *From Y Attribute*, *To X Attribute*, & *To Y Attribute* with the default selection.
@@ -172,12 +173,12 @@ Fix any addresses that need editing and run the addresses again.  If this was a 
 
 
 ### Why did some points geocode to the wrong city?
-The default code for version 2019.6.11 of the MMQGIS plugin doesn't check the zip code.  The code makes a list of streets and blocks that match, but keeps the first one on the list because the section where it checks the zip codes is commented out (a special character at the front of the lines of code tells the program to skip those lines).  We can alter the code because this is an open source program.  We can edit the MMQGIS Plugin to turn on the zip code checking capability:
+The default code for version 2020.1.16 of the MMQGIS plugin doesn't check the zip code.  The code makes a list of streets and blocks that match, but keeps the first one on the list because the section where it checks the zip codes is commented out (a special character at the front of the lines of code tells the program to skip those lines).  We can alter the code because this is an open source program.  We can edit the MMQGIS Plugin to turn on the zip code checking capability:
 
 1. On the *Settings menu* in QGIS, select *User Profiles*, then select *Open Active Profile Folder*.  This should open your file browser and take you to the folder where your profile data is stored.
 1. In the file browser, open the *python* folder, then the *plugins folder*, and finally the *mmqgis folder*.
 1. Open the *mmqgis_library.py* file in a text editor.
-1. Carefully remove the comments code ( # ) from lines 1835-1838 - be careful to make sure you don't alter the amount of space before the text, just delete the hash symbols.
+1. Carefully remove the comments code ( # ) from lines 1898-1901 - be careful to make sure you don't alter the amount of space before the text, just delete the hash symbols.
 1. Save the file.
 1. Restart qgis.
 1. Re-try the plugin.
