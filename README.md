@@ -183,3 +183,9 @@ The default code for version 2020.1.16 of the MMQGIS plugin doesn't check the zi
 1. Restart qgis.
 1. Re-try the plugin.
 1. If the plugin no longer works, open the *Plugin Manger* and uninstall, then reinstall the plugin to restore it to the default code.
+
+## Finishing Up
+Now you have experience with the general geocoding workflow and specifically with the MMQGIS Plugin.  You've cleaned and prepared data, geocoded it, assessed the quality of the results, and seen some troubleshooting and work-arounds.  This workflow will be similar no matter what tool you use, but some of the specific details (such as which columns your data needs and how the tool works) will of course be different from tool to tool.    
+
+You can now work with your point location data to do further analysis or make a map.
+
