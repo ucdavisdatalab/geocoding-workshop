@@ -88,7 +88,7 @@ You should **not include** things like
 
 ### You Try:
 
-This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets.  You can get your own copy in the [data folder](/data).  ***The MMQGIS Geocode from Street Layer tool requires that the street address be separated into two columns*** - one for the street number and another for the street name. How would you clean this dataset & prepare it for use with the MMQGIS plugin?
+This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets.  You can get your own copy in the [data folder](/data).  ***The MMQGIS Geocode from Street Layer tool requires that the street address be separated into two columns - one for the street number and another for the street name.*** How would you clean this dataset & prepare it for use with the MMQGIS plugin?  Using a spreadsheet program (Excel, Calc, etc.), prepare this dataset.
 
 |Restaurant|Street|City|State|Zip|
 |---|---|---|---|---|
