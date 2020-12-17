@@ -178,7 +178,7 @@ The default code for version 2020.1.16 of the MMQGIS plugin doesn't check the zi
 1. On the *Settings menu* in QGIS, select *User Profiles*, then select *Open Active Profile Folder*.  This should open your file browser and take you to the folder where your profile data is stored.
 1. In the file browser, open the *python* folder, then the *plugins folder*, and finally the *mmqgis folder*.
 1. Open the *mmqgis_library.py* file in a text editor.
-1. Carefully remove the comments code ( # ) from lines 1898-1901 - be careful to make sure you don't alter the amount of space before the text, just delete the hash symbols.
+1. Carefully remove the comments code ( # ) from lines 1898-1901 - be careful to make sure you don't alter the amount of space before the text, just delete the hash symbols. Tip: Search for "Compare ZIP Codes" to jump to the section containing the code we need to alter.
 1. Save the file.
 1. Restart qgis.
 1. Re-try the plugin.
