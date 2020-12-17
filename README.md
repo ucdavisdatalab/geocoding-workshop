@@ -130,7 +130,9 @@ Next, let's load our road network data:
 1. Open the *Data Source Manager* dialog either by clicking the button in the tool bar or picking it from the *Layer menu*.
 1. On the navigation bar on the left side of the windo, pick *Vector* because our road network is lines.
 1. Click on the "..." button in the *Source* section of the dialog and navigate though your file structure to where you saved your *tl_2018_06113_edges.shp* file. Select the file and click *Open*.
-1. Finally, in the *Data Source Manager*, click *Add* to add the edges file to the project.  You may need to move the *Data Source Manager* window out of the way to see it.  If it looks good, click the *Close* button.
+1. Finally, in the *Data Source Manager*, click *Add* to add the edges file to the project. 
+1. A window may pop up asking which transformation to use. The first option will work for our purposes. When working on your own, read the options and pick the one that best suits your data location.
+1. Close the *Data Source Manager* window.
 
 Let's explore the road data.  Right click on the *tl_2018_06113_edges* layer in the *Layers panel* (also known as the *Table of Contents* in some GIS programs) and select *Open Attribute Table*.  Make note of the kinds of data stored here.  Specifically, notice the columns with "to" and "from" in the names like *LFROMADD* and *lTOADD*.  These are the fields that contain the address ranges for the blocks that the geocoder needs to be able to estimate where and address is along the roads.  Explore this data further and try to get a feel for what kind of data is stored in the attribute table.
 
