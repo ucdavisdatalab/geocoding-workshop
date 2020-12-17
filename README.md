@@ -108,7 +108,7 @@ A good source of current and recent road data for the US is the US Census TIGER 
 
 Now we'll navigate through the Census' FTP site to download the Yolo County Edges file (be patient, it can be slow):
 
-1. Go to the [US Census' FTP Site](ftp://ftp2.census.gov/geo/tiger)
+1. Go to the [US Census' FTP Site](https://www2.census.gov/geo/tiger/)
 1. Click on the *TIGER2018/* folder - note that you can select the folder for the year you want to work with.
 1. Click on the *EDGES/* folder
 1. Click on the *tl_2018_06113_edges.zip* file and download it to a folder on your computer (that you have permissions for and can find again).  Note that the *06113* part of the file name tells us we're downloading the edges for California's Yolo county.
