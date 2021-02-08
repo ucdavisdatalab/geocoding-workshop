@@ -89,7 +89,7 @@ You should **not include** things like
 
 ### You Try:
 
-This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets.  You can get your own copy in the [data folder](/data).  ***The MMQGIS Geocode from Street Layer tool requires that the street address be separated into two columns - one for the street number and another for the street name.*** How would you clean this dataset & prepare it for use with the MMQGIS plugin?  Using a spreadsheet program (Excel, Calc, etc.), prepare this dataset and save it as *restaurant_addresses_cleaned.csv*.
+This list of restaurants and addresses in downtown Davis came directly from their listing in Google Maps and is pretty typical of geocoding datasets.  You can get your own copy from this [Box folder](https://ucdavis.box.com/s/bp3u2d7zhzgds27wqua5ay0l4as2hgna) or in the Data folder if you cloned this repository.  ***The MMQGIS Geocode from Street Layer tool requires that the street address be separated into two columns - one for the street number and another for the street name.*** How would you clean this dataset & prepare it for use with the MMQGIS plugin?  Using a spreadsheet program (Excel, Calc, etc.), prepare this dataset and save it as *restaurant_addresses_cleaned.csv*.
 
 |Restaurant|Street|City|State|Zip|
 |---|---|---|---|---|
@@ -114,6 +114,8 @@ Now we'll navigate through the Census' FTP site to download the Yolo County Edge
 1. Click on the *EDGES/* folder
 1. Click on the *tl_2018_06113_edges.zip* file and download it to a folder on your computer (that you have permissions for and can find again).  Note that the *06113* part of the file name tells us we're downloading the edges for California's Yolo county.
 1. Navigate in the file browser for your computer to where you saved the file and unzip it.
+
+If the Census' website is not working, there is a copy of the 2018 Yolo County data in this [Box folder](https://ucdavis.box.com/s/g7l7drxlo4x4mle5o6718ayw24ke6gis).
 
 ## Set Up Your QGIS Project
 Let's set up our QGIS project so we have everything we need.  
