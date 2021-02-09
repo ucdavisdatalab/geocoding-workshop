@@ -36,6 +36,16 @@ Buildings are arranged in numerical order along a street and each block typicall
 
 [Image Source: Penn State Dept. of Geography](https://www.e-education.psu.edu/natureofgeoinfo/c4_p7.html)
 
+# The Process
+
+![alt text](/images/process_diagram.png "geocoding process diagram")
+
+There are three main steps to the process of geocoding data:
+
+1. Preparing the data - The data needs to be in the format the geocoding software expects.
+1. Geocoding - Geocoding software generally has 2 steps. First, it normalizes the addresses by performing a series of data cleaning steps to standardize the address input. For example, it might change all "Street" suffixes into "St."  Second, it finds a match with the address and road network to estimate the address' position along the road.
+1. Quality Assessment - How well did your geocoder perform? Are there addresses that need to be adjusted and re-run?
+
 # Software
 There are many tools to help you geocode addresses.  A typical geocoding tool consists of software that compares your addresses to the road network or known address locations.  FOr some software, you may need to provide the road network data or address database, and for other software, you may use data stored online for reference.
 
