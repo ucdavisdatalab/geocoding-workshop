@@ -1,6 +1,9 @@
 # Geocoding Workshop
 In this workshop, we’ll discuss the concepts needed to geocode data, understand options for working with personally identifiable data and non-identifiable data, and gain some hands-on experience with geocoding address data using QGIS, a GIS with a graphical user interface.
 
+This workshop was presented on the following dates:
+* Februrary 9, 2021 - video is available on [DataLab's YouTube Workshop Archive](https://www.youtube.com/watch?v=J3J1zADCBH0)
+
 **Learning Objectives:**
 
 Workshop participants will
